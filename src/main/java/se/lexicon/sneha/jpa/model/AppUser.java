@@ -15,8 +15,8 @@ public class AppUser {
     private String username;
     private String password;
     private LocalDate regDate;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_user_details_id", table = "app_user")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_user_details_id")
     private Details userDetails;
 
 
